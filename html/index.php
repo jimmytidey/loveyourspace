@@ -31,7 +31,7 @@
                      position: myLatlng, 
                      map: map,
                      title:"<? echo $project['title'] ?>"
-                 });
+                 });    
             
             
             <?

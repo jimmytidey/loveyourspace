@@ -1,8 +1,9 @@
-<? include('get_info.php'); ?>
+
 <? 
     $project_id = intval($_GET['project_id']);
     $title = "Love your space";
     include('header.php');
+
 ?>
 
 <h1 id='tite'><? echo $project_data['title'] ?></h1>
