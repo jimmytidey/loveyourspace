@@ -1,5 +1,4 @@
 <? include('db_connect.php'); ?>
-
 <!DOCTYPE html>
 <html>
 	<head>

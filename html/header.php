@@ -1,5 +1,5 @@
 <? include('db_connect.php'); ?>
-
+<? include('get_info.php'); ?>
 <!DOCTYPE html>
 <html>
 	<head>
