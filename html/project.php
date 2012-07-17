@@ -40,7 +40,7 @@
     foreach($message_data as $message) { 
         echo "<p class='message'>";
         echo "<span class='message_date'>" . date("F j", $message['time']) . "</span>";
-        echo($message['text']); 
+        echo stripslashes($message['text']); 
         echo "</p>";
     }
     echo"</div>";
