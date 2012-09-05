@@ -2,6 +2,7 @@
 <? 
     $project_id = intval($_GET['project_id']);
     $title = "Love your space";
+    $page_name = "project";
     include('header.php');
 
 ?>
@@ -33,13 +34,22 @@
     google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 
-<div id="map_canvas"></div>
+<div id='map_container'>
+    <div id="map_canvas"></div>
+</div>
+
+
+<p>Why not join in? Enter your email below...</p>
+<form id='volunteer_form'>
+    <input id='email_address' value='Your email' name='email_address' />
+    <input type='button' value='Join in!' id='join_in' / >
+</form>
 
 <?  
     echo "<div id='messages'>";
     foreach($message_data as $message) { 
         echo "<p class='message'>";
-        echo "<span class='message_date'>" . date("F j", $message['time']) . "</span>";
+        echo "<span class='message_date'>[" . date("F j", $message['time']) . "]</span>";
         echo stripslashes($message['text']); 
         echo "</p>";
     }
@@ -47,24 +57,22 @@
 
 ?>
 
+
 <form id='message_form'>
     <textarea id='message_text' name='message_text'></textarea>
-
+    <br/>
     <input type='button' value='add a message' id='save_message' / >
 </form>
 
-<p>Why not join in - enter your email below...</p>
-<form id='volunteer_form'>
-    <input id='email_address' value='Your email' name='email_address' />
-    <input type='button' value='Join in!' id='join_in' / >
-</form>
 
-<a href="https://twitter.com/share" class="twitter-share-button" data-url="" data-via="your_screen_name" data-lang="en" data-related="anywhereTheJavascriptAPI" data-count="vertical">Tweet</a>
 
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<div id='social_buttons'>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-url="" data-via="your_screen_name" data-lang="en" data-related="anywhereTheJavascriptAPI" data-count="vertical">Tweet</a>
 
-<iframe src="//www.facebook.com/plugins/like.php?href=<? echo urlencode(curPageURL()); ?>&amp;send=false&amp;layout=box_count&amp;width=43&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=90&amp;appId=188513601267454" scrolling="no" id='fb_like' frameborder="0" style="border:none; overflow:hidden; width:50px; height:90px;" allowTransparency="true"></iframe>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
+    <iframe src="//www.facebook.com/plugins/like.php?href=<? echo urlencode(curPageURL()); ?>&amp;send=false&amp;layout=box_count&amp;width=43&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=90&amp;appId=188513601267454" scrolling="no" id='fb_like' frameborder="0" style="border:none; overflow:hidden; width:50px; height:90px;" allowTransparency="true"></iframe>
+</div>
 
 
 <script>

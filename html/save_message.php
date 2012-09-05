@@ -1,8 +1,8 @@
 <?
 include("db_connect.php");
  
-$project_id = mysql_real_escape_string(addslashes($_POST['project_id']));
-$message    = mysql_real_escape_string(addslashes($_POST['message']));
+$project_id = mysql_real_escape_string($_POST['project_id']);
+$message    = mysql_real_escape_string($_POST['message']);
 $ip_address = $_SERVER["REMOTE_ADDR"];
 $time = time();
 

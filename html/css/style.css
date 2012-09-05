@@ -1,7 +1,10 @@
+/* site wide */
+
 html, body{ 
 	margin:0px;
 	padding:0px;
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	background-image:url(../resources/background.png);
 }
 
 h1, h2 {
@@ -13,34 +16,59 @@ h1 {
 	font-size:18px;
 }
 
-#container { 
-	width:400px;
-	position:relative;
-	margin:10px auto 10px auto;
-	height:642px;
-	padding: 0px 10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	border:1px solid black;
-}
-
-#index { 
-	width:600px;
-	position:relative;
-	margin:10px auto 10px auto;
-	height:600px;
-	padding: 0px 10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	border:1px solid black;
-}
-
 #logo { 
 	padding-top:16px;
 	float:right;
 }
+
+#container { 
+	width:742px;
+	margin:auto;
+	position:relative;
+}
+
+/* index css */
+
+#index #logo { 
+	display:none;
+}
+
+#index #map_canvas { 
+	width:708px;
+	position:relative;
+	margin:10px auto 10px auto;
+	height:600px;
+}
+
+#index #map_container { 
+	width:738px;
+	padding: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border:2px dashed #bd6457;
+	padding:10px;
+}
+
+#new_project_btn { 
+	width:300px;
+	height:20px;
+	padding: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border:2px dashed #bd6457;
+	background-color:white;
+	text-decoration:none;
+	color:#bd6457;
+	font-size:18px;
+	margin:50px 0px 50px 260px;
+	display:block;
+	text-align:center;
+	padding-top:10px;
+	
+}
+
 
 /* projects css */ 
 
@@ -50,24 +78,6 @@ h1 {
 	font-size:12px;
 }
 
-#message_text { 
-	width:398px;
-	margin-top:4px;
-}
-
-.message { 
-	font-size:12px;
-}
-.message_date { 
-	font-size:10px;
-	margin-right:4px;
-	font-weight:bold;
-}
-
-#messages { 
-	height:100px;
-	overflow:auto;
-}
 
 #map_canvas{
 	width:398px;
@@ -88,16 +98,131 @@ h1 {
 	margin-top:10px;
 }
 
+/* New Project */
 
-/*index page */
 
-#index #map_canvas { 
-	height:580px;
-	width:600px;
-	margin-top:10px;
+
+#new_project #map_canvas { 
+	width:708px;
+	position:relative;
+	margin:10px auto 10px auto;
+	height:400px;
+}
+
+#new_project #map_container { 
+	width:738px;
+	padding: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border:2px dashed #bd6457;
+	padding:10px;
+}
+
+#new_project label, #new_project input { 
+	width:250px;
+	float:left;
+}
+
+#new_project textarea { 
+	width:250px;
+	height:100px;
+}
+
+#save_project { 
+	width:300px;
+	height:50px;
+	padding: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border:2px dashed #bd6457;
+	background-color:white;
+	text-decoration:none;
+	color:#bd6457;
+	font-size:18px;
+	margin:50px 0px 50px 260px;
+	display:block;
+	text-align:center;
+	padding-top:10px;
+}
+
+#send_email_address { 
+	width:300px;
+	height:50px;
+	padding: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border:2px dashed #bd6457;
+	background-color:white;
+	text-decoration:none;
+	color:#bd6457;
+	font-size:18px;
+	margin:50px 0px 50px 260px;
+	display:block;
+	text-align:center;
+	padding-top:10px;
+}
+
+/* PROJECT PAGE */
+
+
+#project #map_canvas { 
+	width:708px;
+	position:relative;
+	margin:10px auto 10px auto;
+	height:400px;
+}
+
+#project #map_container { 
+	width:738px;
+	padding: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border:2px dashed #bd6457;
+	padding:10px;
 }
 
 
+#message_text { 
+	width:398px;
+	margin-top:4px;
+}
 
+.message { 
+	font-size:12px;
+}
+.message_date { 
+	font-size:10px;
+	margin-right:4px;
+	font-weight:bold;
+}
 
+#messages { 
+	margin-top:10px;
+}
+#social_buttons {
+ position: absolute;
+    right: 4px;
+    top: 574px;
+}
 
+#join_in { 
+	width:300px;
+	height:50px;
+	padding: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border:2px dashed #bd6457;
+	background-color:white;
+	text-decoration:none;
+	color:#bd6457;
+	font-size:18px;
+	margin:50px 0px 50px 260px;
+	display:block;
+	text-align:center;
+	padding-top:10px;	
+}

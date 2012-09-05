@@ -17,6 +17,6 @@
 		<link rel="stylesheet" href="jquery/css/jquery-ui-1.8.17.custom.css" type="text/css" media="screen" title="no title" charset="utf-8">	
 	</head>
 	
-	<body>
+	<body id='<?=$page_name ?>'  >
 	    
-	    <div id='index'>
+	    <div id='container'>
